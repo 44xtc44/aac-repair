@@ -1,9 +1,9 @@
 Node.js: aac-repair
 ===================
 
-node.js translation and enhancement of the Python ``aacRepair`` repository.
+node.js translation and enhancement of the [Python aacRepair](https://github.com/44xtc44/aacRepair)  repository.
 
-`aac-repair` is a sound file repair tool for .aac and .aacp files. 
+*aac-repair* is a sound file repair tool for .aac and .aacp files. 
 It reads the file header codes.
 
 * express server terminal with React based frontend file upload
