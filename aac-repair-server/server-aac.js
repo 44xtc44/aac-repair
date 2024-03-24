@@ -35,6 +35,10 @@ const app = (options) => {
   // Opens the URL in the default browser.
   if(options.browser) open('http://localhost:' + PORT);
   
+  app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+  
   app.post("/api/upload-file", cors(), (req, res, next) => {   // cors enabled for this route
   try {
       if (!req.files) {
@@ -131,17 +135,6 @@ const app = (options) => {
     })();
     return;
   }
-  
-  app.get('/', function(req, res, next) {
-    res.setHeader('Content-Type', 'text/plain');
-    res.send('root. Must be set, else cannot GET error.')
-  });
-
-  app.get('/foo', (req, res) => {  
-      res.setHeader('Content-Type', 'text/plain');
-      res.send('foo is not bar!')
-  })
-  
   
   app.listen(PORT, () => {
         console.log('server listening on port ' + PORT)
