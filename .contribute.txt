@@ -1,0 +1,13 @@
+"/aac-repair-react" dumps /build folder to /aac-repair-server, "npm run build" 
+	dev
+"/aac-repair-server" provides 
+	dev package.json in "/aac-repair-server" is just for dev (dependencies)
+	*.js files and /build folder put in root, 
+		plus update the release package.json and Readme.md; 
+	
+
+.npmignore contains all folders to exclude, 
+	so we can remote use the folder, (git+https...)
+
+Repo layout is configured to allow npm install from github, 
+i.e Snap build inofficial release.

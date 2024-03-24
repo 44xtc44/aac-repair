@@ -1,0 +1,32 @@
+name: aac-repair
+base: core20
+version: '1.1.1'
+summary: Sound file repair app.
+description: |
+  Repairs sound files.
+  
+license: MIT
+grade: stable
+confinement: strict
+compression: lzo
+
+# run.sh needs chmod +x, /gui needs full access for snapcraft lxd user
+apps:
+  aac-repair:
+    command: usr/bin/run  # package is installed with global flag, get the executable / but can not get called directly
+    plugs: [home, network, network-bind, removable-media, desktop, desktop-legacy, wayland, unity7]  # read, write on storage
+    
+parts:
+  copy-runscript:
+    plugin: dump
+    source: .  # run.sh is in top of our /snap folder
+    organize:
+      run.sh: usr/bin/run  # https://ograblog.wordpress.com/2021/09/29/snap-your-shell-scripts/ 
+  aac-repair-node:  # "snapcraft clean aac-repair" cleans this part
+    plugin: npm
+    source: .  # run.sh is on top of this folder
+    npm-node-version: 20.11.1
+    override-build: |
+      curl -s https://nodejs.org/dist/latest-v20.x/node-v20.11.1-linux-x64.tar.gz | tar xzf - -C "$SNAPCRAFT_PART_INSTALL" --strip-components=1
+      npm install aac-repair -g  # npm creates executable 'aac-repair'; global flag
+      npm install -g npm@10.5.0  # recommended upgrade by npm installer

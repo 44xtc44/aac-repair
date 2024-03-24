@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+// JavaScript
+"use strict";
+
+/**
+ * bin field auto starter if pkg is installed global; 
+ *  
+ * npm makes some executable from us for the current OS
+*   package.json add
+*    "bin": { "aac-repair": "./aac-repair }
+*/
+const aac = require("aac-repair");
+aac.app( {browser: true} );

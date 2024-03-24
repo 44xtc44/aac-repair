@@ -1,0 +1,49 @@
+{
+  "private": false,
+  "name": "aac-repair",
+  "version": "1.1.2",
+  "description": "Browser refuses to play aac file. Clean cut header and payload. Translation from Python project node.js.",
+  "main": "./index.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "lint": "standard --verbose --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/44xtc44/aac-repair.git"
+  },
+  "author": "44xtc44",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/44xtc44/aac-repair/issues"
+  },
+  "exports": {
+    ".": "./index.js"
+  },
+  "keywords": [
+    "aac",
+    "aacp",
+    "browser play aac repair"
+  ],
+  "homepage": "https://github.com/44xtc44/aac-repair",
+  "dependencies": {
+    "express": "^4.18.3",
+    "express-fileupload": "^1.5.0",
+    "fs-extra": "^11.2.0",
+    "out-url": "^1.2.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/express-fileupload": "^1.4.4",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.28"
+  },
+  "bin": {
+    "aac-repair": "aac-repair"
+  }
+}

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.1.1
+Type=Application
+Terminal=true
+Exec=aac-repair
+Icon=${SNAP}/meta/gui/aac-repair-logo.svg
+Name=aac-repair
+Comment=AAC, AACP file repair
+Categories=Audio;Utility;AudioVideo;
