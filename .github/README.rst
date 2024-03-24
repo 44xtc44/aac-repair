@@ -34,8 +34,8 @@ Install global to get the executable ``aac-repair``.
 Usage
 -----
 
-#### OS got a User Interface (UI)
-
+OS got a User Interface (UI)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Start the Frontend and Backend. Get a Browser window.
 Terminal window shows progress.
@@ -61,7 +61,8 @@ Terminal window shows progress.
 
 |
 
-#### Folder
+Folder
+~~~~~~~
 
 The repaired files are dumped to ``aacRepaired`` folder beneath. 
 
@@ -71,7 +72,8 @@ The repaired files are dumped to ``aacRepaired`` folder beneath.
     aac.repairAacFolder("C:\\Users\\Schtroumpfette\\sound");
 
 
-#### File repair
+File repair
+~~~~~~~~~~~~
 
 .. code-block::
 
@@ -99,7 +101,8 @@ The repaired files are dumped to ``aacRepaired`` folder beneath.
         }
         bodyCut();
 
-#### File (folder) test preparation
+File (folder) test preparation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The cut files (-1 Byte) are dumped to ``aacDamaged`` folder beneath.
 
@@ -110,7 +113,8 @@ The cut files (-1 Byte) are dumped to ``aacDamaged`` folder beneath.
 
 
 
-#### Command line Browser start
+Command line Browser start
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block::
 
@@ -126,7 +130,9 @@ Got to "node_modules/aac-repair" directory.
     foo@bar:~$ cd node_modules/aac-repair
     foo@bar:~$ node server-aac.js  --frontend
 
-#### Command line folder repair
+Command line folder repair
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Install the package in a folder.
 Got to "node_modules/aac-repair" directory.
 ``-d "path"``
