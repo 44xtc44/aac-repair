@@ -132,6 +132,11 @@ const app = (options) => {
     return;
   }
   
+  app.get('/', function(req, res, next) {
+    res.setHeader('Content-Type', 'text/plain');
+    res.send('root. Must be set, else cannot GET error.')
+  });
+
   app.get('/foo', (req, res) => {  
       res.setHeader('Content-Type', 'text/plain');
       res.send('foo is not bar!')
