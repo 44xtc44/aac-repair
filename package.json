@@ -45,10 +45,10 @@
     "@types/node": "^20.11.28"
   },
   "files": [
-  "build",
-  "aacWorker.js",
-  "index.js",
-  "server-aac.js"
+    "build",
+    "aacWorker.js",
+    "index.js",
+    "server-aac.js"
   ],
   "bin": {
     "aac-repair": "aac-repair"

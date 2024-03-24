@@ -5,7 +5,7 @@
 .venv/
 bin/
 dist/
-build/
+
 wheelhouse/
 *.egg-info/
 *.py[co]
